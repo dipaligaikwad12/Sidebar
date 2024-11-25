@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidebar</title>
+    <style>
+        .container{
+            width: 300px;
+            background-color:aquamarine ;
+            margin:none;
+            padding: 10px;
+            height: 600px;
+            position: fixed;
+        }
+        .sub-container{
+            background-color: aliceblue;
+            width: 250px;
+            margin: 5px;
+            margin-top: 10px;
+            font-size: 25px;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        .sub-container:hover{
+            box-shadow: 1px 1px 2px 2px gray;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .close-img{
+            height: 25px;
+        }
+    </style>
 </head>
 <body>
     
+    <div class="container">
+        <img src="close.png" class="close-img">
+        <div class="sub-container">Home</div>
+        <div class="sub-container">Home</div>
+        <div class="sub-container">Home</div>
+        <div class="sub-container">Home</div>
+    </div>
 </body>
 </html>

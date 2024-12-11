@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidebar</title>
     <style>
-        .container{
+        body {
+            background-color: wheat;
+        }
+
+        .container {
             width: 300px;
-            background-color:aquamarine ;
-            margin:none;
+            background-color: aquamarine;
+            margin: none;
             padding: 10px;
             height: 600px;
             position: fixed;
         }
-        .sub-container{
+
+        .menu-element {
             background-color: aliceblue;
             width: 250px;
             margin: 5px;
@@ -22,24 +28,49 @@
             padding: 10px;
             border-radius: 3px;
         }
-        .sub-container:hover{
+
+        .menu-element:hover {
             box-shadow: 1px 1px 2px 2px gray;
             cursor: pointer;
             border-radius: 5px;
         }
-        .close-img{
-            height: 25px;
-        }
     </style>
 </head>
+
 <body>
-    
+
     <div class="container">
-        <img src="close.png" class="close-img">
-        <div class="sub-container">Home</div>
-        <div class="sub-container">Home</div>
-        <div class="sub-container">Home</div>
-        <div class="sub-container">Home</div>
+        <div class="menu-element">
+            <i class="fa-solid fa-house"></i>
+            <a href="#" class="text">Home</a>
+        </div>
+        <div class="menu-element">
+            <i class="fa-solid fa-house"></i>
+            <a href="#" class="text">About Us</a>
+        </div>
+        <div class="menu-element">
+            <i class="fa-solid fa-house"></i>
+            <a href="#" class="text">Services</a>
+        </div>
+        <div class="menu-element">
+            <i class="fa-solid fa-house"></i>
+            <a href="#" class="text">Food Menu </a>
+        </div>
+        <div class="menu-element">
+            <i class="fa-solid fa-house"></i>
+            <a href="#" class="text">Contact</a>
+        </div>
+        <div class="menu-element">
+            <i class="fa-solid fa-gear"></i>
+            <a href="#" class="text">Setting</a>
+        </div>
+        <div class="menu-element">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <a href="#" class="text">Login</a>
+        </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/9f33e71505.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

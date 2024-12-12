@@ -7,19 +7,26 @@
     <title>Sidebar</title>
     <style>
         body {
-            background-color: wheat;
+            background-color: #cce6ff;
+            width: 100%;
+            height: 100%;
         }
 
         .container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            visibility: hidden;
             width: 300px;
             background-color: aquamarine;
-            margin: none;
             padding: 10px;
             height: 600px;
-            position: fixed;
         }
 
         .menu-element {
+            display: flex;
+            align-items: center;
+            gap: 15px;
             background-color: aliceblue;
             width: 250px;
             margin: 5px;
@@ -34,43 +41,74 @@
             cursor: pointer;
             border-radius: 5px;
         }
+        .menubar{
+        position: fixed;
+        top: 20px;
+        left: 10px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .menu-icon{
+        margin-left: 15px;
+        font-size: 32px;
+       color: #00004d;
+    }
+    .text{
+        text-decoration: none;
+        color: #00004d;
+        font-size: 20px;
+    }
     </style>
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="menu-element">
-            <i class="fa-solid fa-house"></i>
-            <a href="#" class="text">Home</a>
+    <i class="fa-solid fa-bars menubar menu-icon" id="menu" onclick="openSidebar()"> </i>
+    
+    <div class="container" id="sidebar">
+        <div class="close-element menu-icon" onclick="closeSidebar()">
+            <i class="fa-solid fa-xmark"></i>
         </div>
-        <div class="menu-element">
-            <i class="fa-solid fa-house"></i>
-            <a href="#" class="text">About Us</a>
-        </div>
-        <div class="menu-element">
-            <i class="fa-solid fa-house"></i>
-            <a href="#" class="text">Services</a>
-        </div>
-        <div class="menu-element">
-            <i class="fa-solid fa-house"></i>
-            <a href="#" class="text">Food Menu </a>
-        </div>
-        <div class="menu-element">
-            <i class="fa-solid fa-house"></i>
-            <a href="#" class="text">Contact</a>
-        </div>
-        <div class="menu-element">
-            <i class="fa-solid fa-gear"></i>
-            <a href="#" class="text">Setting</a>
-        </div>
-        <div class="menu-element">
-            <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#" class="text">Login</a>
+        <div>
+            <div class="menu-element">
+                <i class="fa-solid fa-house menu-icon"></i>
+                <a href="#" class="text">Home</a>
+            </div>
+            <div class="menu-element">
+                <i class="fa-solid fa-user menu-icon"></i>
+                <a href="#" class="text">About Us</a>
+            </div>
+            <div class="menu-element">
+                <i class="fa-solid fa-briefcase menu-icon"></i>
+                <a href="#" class="text">Services</a>
+            </div>
+            <div class="menu-element">
+                <i class="fa-solid fa-phone menu-icon"></i>
+                <a href="#" class="text">Contact</a>
+            </div>
+            <div class="menu-element ">
+                <i class="fa-solid fa-gear menu-icon"></i>
+                <a href="#" class="text">Setting</a>
+            </div>
+            <div class="menu-element">
+                <i class="fa-solid fa-right-to-bracket menu-icon"></i>
+                <a href="#" class="text">Login</a>
+            </div>
         </div>
     </div>
 
     <script src="https://kit.fontawesome.com/9f33e71505.js" crossorigin="anonymous"></script>
+    <script>
+        const sidebarElement = document.getElementById("sidebar")
+        const menuElement = document.getElementById("menu")
+        function openSidebar() {
+            sidebarElement.style.visibility = "visible";
+            menuElement.style.visibility = "hidden";
+        }
+        function closeSidebar() {
+            sidebarElement.style.visibility = "hidden";
+            menuElement.style.visibility = "visible";
+        }
+    </script>
 </body>
 
 </html>
